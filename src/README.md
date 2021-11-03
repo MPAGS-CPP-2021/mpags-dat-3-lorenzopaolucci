@@ -46,7 +46,12 @@ $
 ```
 
 Again, the exact output will be system specific, but you should see the 
-`mpags-cipher` target built without error. The resulting `mpags-cipher`
+`mpags-cipher` target built without error. 
+
+It's possible to run tests of the different components, with the command 'cmake test'. 
+These tests are located in the src/Testing folder.
+
+The resulting `mpags-cipher`
 executable can then be run directly, and provides the following command
 line options:
 ```
@@ -99,12 +104,24 @@ file supplied with the `-o` option.
     ├── CMakeLists.txt              CMake build script
     ├── LICENSE                     License file, in our case MIT
     ├── MPAGSCipher                 Subdirectory for MPAGSCipher library code
+    |   ├── CaesarCipher.cpp
+    |   ├── CaesarCipher.hpp
+    |   ├── CaesarMode.hpp
+    |   ├── CMakeLists.txt
     │   ├── ProcessCommandLine.cpp
     │   ├── ProcessCommandLine.hpp
     │   ├── RunCaesarCipher.cpp
     │   ├── RunCaesarCipher.hpp
     │   ├── TransformChar.cpp
     │   └── TransformChar.hpp
+    ├── Testing                     A few tests of the different components built integrated with Cmake/Catch
+    |   ├── catch.hpp
+    |   ├── CMakeLists.txt
+    |   ├── testCaesarCipher.cpp
+    |   ├── testCatch.cpp
+    |   ├── testHello.cpp
+    |   ├── testProcessCommandLine.cpp
+    |   ├── testTranformChar.cpp
     ├── README.md                   This file, describes the project
     └── mpags-cipher.cpp            Main program C++ source file
 ```
