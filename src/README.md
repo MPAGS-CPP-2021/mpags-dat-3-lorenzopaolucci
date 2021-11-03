@@ -48,7 +48,7 @@ $
 Again, the exact output will be system specific, but you should see the 
 `mpags-cipher` target built without error. 
 
-It's possible to run tests of the different components, with the command 'cmake test'. 
+It's possible to run tests of the different components, with the command `cmake test`. 
 These tests are located in the src/Testing folder.
 
 The resulting `mpags-cipher`
